@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Iconos</title>
     <style>
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-        }
-
-        .image-grid img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    </style>
-    <style>      
         body {
             background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1492334975209276768/24272D423EACCB9794A3A5672D98AB679295474E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
             background-size: cover;
@@ -27,87 +13,48 @@
             text-align: center;
             color: white;
             font-family: Arial, sans-serif;
-            height: 100vh; /* Full height */
-            width: 100vw; /* Full width */
+            height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 20px;
             justify-content: center;
             width: 50%;
         }
+
         .image-grid img {
-            width: 100%;
-            height: auto;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="image-grid">
-        <img src="https://www.keyweo.com/wp-content/uploads/2022/03/el-logo-g-de-google.png" alt="Imagen 1" onclick="openWin1()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Imagen 2" onclick="openWin2()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spotify.png/1200px-Spotify.png" alt="Imagen 3" onclick="openWin3()">
-        <img src="https://seeklogo.com/images/O/open-ai-logo-8B9BFEDC26-seeklogo.com.png" alt="Imagen 4" onclick="openWin4()">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4fKlE0XtD1A8gVq1FhTSpdceZlPGWRi_xA&s" alt="Imagen 5" onclick="openWin5()">
-        <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/0da2295e96b19741684466d55cf5a6ab.png" alt="Imagen 6" onclick="openWin6()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Imagen 7" onclick="openWin7()">
-        <img src="https://fatimamartinez.es/wp-content/uploads/2020/06/Logo-TikTok.png" alt="Imagen 8" onclick="openWin8()">
-        <img src="https://cdn.icon-icons.com/icons2/4029/PNG/512/twitter_x_new_logo_x_rounded_icon_256078.png" alt="Imagen 9" onclick="openWin9()">
+        <img src="https://www.keyweo.com/wp-content/uploads/2022/03/el-logo-g-de-google.png" alt="Google" onclick="openWin('https://www.google.com', 'Google')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" onclick="openWin('https://www.youtube.com', 'YouTube')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Spotify.png/1200px-Spotify.png" alt="Spotify" onclick="openWin('https://open.spotify.com/intl-es/artist/43MtsZcuqYi0RZfeZEjNhV', 'Spotify')">
+        <img src="https://seeklogo.com/images/O/open-ai-logo-8B9BFEDC26-seeklogo.com.png" alt="ChatGPT" onclick="openWin('https://chat.openai.com', 'ChatGPT')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4fKlE0XtD1A8gVq1FhTSpdceZlPGWRi_xA&s" alt="Poki" onclick="openWin('https://poki.com', 'Poki')">
+        <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/0da2295e96b19741684466d55cf5a6ab.png" alt="Kour" onclick="openWin('https://kour.io', 'Kour')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" onclick="openWin('https://www.instagram.com', 'Instagram')">
+        <img src="https://fatimamartinez.es/wp-content/uploads/2020/06/Logo-TikTok.png" alt="TikTok" onclick="openWin('https://www.tiktok.com', 'TikTok')">
+        <img src="https://cdn.icon-icons.com/icons2/4029/PNG/512/twitter_x_new_logo_x_rounded_icon_256078.png" alt="Twitter" onclick="openWin('https://www.twitter.com', 'Twitter')">
     </div>
 
     <script>
-        function openWin1() {
-            var myWindow = window.open("", "myWindow1", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://www.google.com'>Google</a>");
-        }
-
-        function openWin2() {
-            var myWindow = window.open("", "myWindow2", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://www.youtube.com'>YouTube</a>");
-        }
-
-        function openWin3() {
-            var myWindow = window.open("", "myWindow3", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://open.spotify.com/intl-es/artist/43MtsZcuqYi0RZfeZEjNhV'>Spotify de Diegolas</a>");
-        }
-
-        function openWin4() {
-            var myWindow = window.open("", "myWindow4", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://chat.openai.com'>ChatGPT</a>");
-        }
-
-        function openWin5() {
-            var myWindow = window.open("", "myWindow5", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://poki.com'>Poki</a>");
-        }
-
-        function openWin6() {
-            var myWindow = window.open("", "myWindow6", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://kour.io'>Kour</a>");
-        }
-
-        function openWin7() {
-            var myWindow = window.open("", "myWindow7", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://www.instagram.com'>Instagram</a>");
-        }
-
-        function openWin8() {
-            var myWindow = window.open("", "myWindow8", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://www.tiktok.com'>TikTok</a>");
-        }
-
-        function openWin9() {
-            var myWindow = window.open("", "myWindow9", "width=400,height=300");
-            myWindow.document.write("<p>Bienvenido a Unlocked VIII</p><a href='https://www.twitter.com'>Twitter</a>");
+        function openWin(url, title) {
+            window.open(url, title, "width=400,height=300");
         }
     </script>
 </body>
