@@ -18,7 +18,7 @@ function navigateTo(page) {
         .then(html => {
             document.getElementById('content').innerHTML = html;
             document.getElementById('sidebar').classList.remove('show');
-            document.getElementById('content').classList.remove('shifted');
+            document.getElementById('content').classList.remove('shifted'); // Cambiado 'show' por 'shifted'
         })
         .catch(error => {
             console.error('Error al cargar la página:', error);
