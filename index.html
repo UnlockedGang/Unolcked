@@ -3,72 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>César</title>
+    <title>Página Web Frutiger Aero</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1492334975209276768/24272D423EACCB9794A3A5672D98AB679295474E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-align: center;
-            color: white;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            width: 50%;
-        }
-
-        .image-grid img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-    </head>
-<body>
     <header>
-        <nav>
-            <ul id="menu">
-                <li><a href="#" class="menu-item">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#" class="menu-item">Menú</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#" onclick="navigateTo('page1.html')">Página 1</a></li>
-                        <li><a href="#" onclick="navigateTo('page2.html')">Página 2</a></li>
-                        <li><a href="#" onclick="navigateTo('page3.html')">Página 3</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div id="menu-bar">
+            <button id="menu-toggle">☰ Menú</button>
+        </div>
     </header>
 
-    <main id="content">
+    <nav id="sidebar" class="hidden">
+        <ul>
+            <li><a href="#" onclick="navigateTo('inicio.html')">Inicio</a></li>
+            <li><a href="#" onclick="navigateTo('page1.html')">Página 1</a></li>
+            <li><a href="#" onclick="navigateTo('page2.html')">Página 2</a></li>
+            <li><a href="#" onclick="navigateTo('page3.html')">Página 3</a></li>
+        </ul>
+    </nav>
+
+    <main id="content" class="content-wrapper">
         <h1>Bienvenido a la Página de Inicio</h1>
         <p>Contenido principal aquí...</p>
+        <div class="image-grid">
+            <img src="https://via.placeholder.com/100" alt="Imagen 1">
+            <img src="https://via.placeholder.com/100" alt="Imagen 2">
+            <img src="https://via.placeholder.com/100" alt="Imagen 3">
+            <img src="https://via.placeholder.com/100" alt="Imagen 4">
+        </div>
     </main>
 
     <script src="scripts.js"></script>
-      <script>
-        function openWin(url, title) {
-            window.open(url, title, "width=2160,height=1620");
-        }
-    </script>
 </body>
 </html>
+
