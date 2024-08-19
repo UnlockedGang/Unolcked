@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Iconos</title>
+    <title>César</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1492334975209276768/24272D423EACCB9794A3A5672D98AB679295474E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
@@ -40,6 +41,30 @@
     </style>
 </head>
 <body>
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="#" class="menu-item">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="menu-item">Menú</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" onclick="navigateTo('page1.html')">Página 1</a></li>
+                        <li><a href="#" onclick="navigateTo('page2.html')">Página 2</a></li>
+                        <li><a href="#" onclick="navigateTo('page3.html')">Página 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h1>Bienvenido a la Página de Inicio</h1>
+        <p>Contenido principal aquí...</p>
+    </main>
+
+    <script src="scripts.js"></script>
     <div class="image-grid">
         <img src="https://www.keyweo.com/wp-content/uploads/2022/03/el-logo-g-de-google.png" alt="Google" onclick="openWin('https://www.google.com', 'Google')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" onclick="openWin('https://www.youtube.com', 'YouTube')">
