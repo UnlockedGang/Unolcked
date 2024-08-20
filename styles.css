@@ -1,75 +1,45 @@
-/* Estilos generales */
-body, html {
-    height: 100%;
-    margin: 0;
+/* Estilos básicos para la página */
+body {
     font-family: Arial, sans-serif;
-    background-color: #eef2f3; /* Suave fondo blanco-azulado para el estilo Frutiger Aero */
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilos del contenido */
-.content {
-    background-image: url('URL_DE_TU_IMAGEN_DE_FONDO'); /* Asegúrate de reemplazar con la URL de tu imagen */
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    position: relative;
-    z-index: 1;
+/* Estilo del menú superior */
+.topnav {
+    background-color: #333;
     overflow: hidden;
 }
 
-/* Overlay para el texto y el botón */
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    z-index: 2;
-    backdrop-filter: blur(10px); /* Efecto de vidrio */
-    background: rgba(255, 255, 255, 0.4); /* Fondo semitransparente */
-    padding: 20px;
-    border-radius: 15px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Cambia la fuente y el color del título */
-.web-title {
-    font-family: 'Permanent Marker', sans-serif;
-    color: #00FF00;  /* Color verde brillante */
-    font-size: 3em;
-    font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto de sombra suave */
-    margin-bottom: 20px;
-}
-
-/* Estilo del botón */
-button {
-    background-color: rgba(0, 255, 255, 0.8); /* Color turquesa translúcido */
-    border: 2px solid #00FF00; /* Borde verde brillante */
+.topnav a:hover {
+    background-color: #ddd;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px; /* Botón redondeado */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-/* Barra lateral */
-.sidebar {
+/* Estilo de la barra lateral */
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #222;
+    background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
-.sidebar a {
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -78,11 +48,11 @@ button {
     transition: 0.3s;
 }
 
-.sidebar a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
 }
 
-.sidebar .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -90,34 +60,8 @@ button {
     margin-left: 50px;
 }
 
-/* Barra superior */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 15px;
-    text-align: left;
-    border-bottom: 3px solid #00FF00;
-    z-index: 4;
-}
-
-/* Estilo del ícono del menú */
-.openbtn {
-    font-size: 30px;
-    cursor: pointer;
-    color: #00FF00;
-    border: none;
-    background: none;
-    padding-left: 10px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.openbtn:hover {
-    transform: scale(1.1);
-}
-
-/* Asegura que el contenido no esté oculto detrás de la barra superior */
-.content {
-    padding-top: 80px;
+/* Estilo principal */
+.main {
+    margin-left: 20px;
+    padding: 16px;
 }
