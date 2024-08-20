@@ -7,11 +7,12 @@ body, html {
 
 /* Estilos del contenido */
 .content {
-    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1492334975209276768/24272D423EACCB9794A3A5672D98AB679295474E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+    background-image: url('URL_DE_TU_IMAGEN_DE_FONDO');
     background-size: cover;
     background-position: center;
     height: 100%;
     position: relative;
+    z-index: 1; /* Asegura que el contenido esté debajo de la barra */
 }
 
 /* Overlay para el texto y el botón */
@@ -21,14 +22,15 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2; /* Asegura que el overlay esté por encima de la imagen */
 }
 
-/* Cambia el estilo del título */
+/* Cambia la fuente y el color del título */
 .web-title {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    font-weight: bold;  /* Negrita */
+    font-family: 'Permanent Marker', sans-serif;
     color: #00FF00;  /* Color verde */
     font-size: 3em;
+    font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
@@ -53,7 +55,7 @@ button {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3; /* Asegura que la barra lateral esté por encima del contenido */
     top: 0;
     left: 0;
     background-color: #111;
@@ -92,6 +94,7 @@ button {
     padding: 20px 15px;  /* Barra superior más grande */
     text-align: left;
     border-bottom: 3px solid #00FF00;  /* Línea inferior verde */
+    z-index: 4;  /* Asegura que la barra esté siempre por encima del contenido */
 }
 
 /* Estilo del ícono del menú inspirado en Frutiger Aero */
