@@ -5,6 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* Estilos del contenido */
 .content {
     background-image: url('URL_DE_TU_IMAGEN_DE_FONDO');
     background-size: cover;
@@ -22,8 +23,10 @@ body, html {
     text-align: center;
 }
 
+/* Cambia la fuente y el color del título */
 .web-title {
-    color: #fff;
+    font-family: 'Timnastic', sans-serif;
+    color: #00FF00;  /* Color verde */
     font-size: 3em;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -80,20 +83,33 @@ button {
     margin-left: 50px;
 }
 
-/* Barra superior */
+/* Barra superior más grande con estilo Frutiger Aero */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 10px;
+    padding: 20px 15px;  /* Barra superior más grande */
     text-align: left;
+    border-bottom: 3px solid #00FF00;  /* Línea inferior verde */
 }
 
+/* Estilo del ícono del menú inspirado en Frutiger Aero */
 .openbtn {
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: #00FF00;  /* Color verde */
     border: none;
     background: none;
+    padding-left: 10px;  /* Deslizar hacia la derecha */
+    transition: transform 0.2s ease-in-out;
+}
+
+.openbtn:hover {
+    transform: scale(1.1);  /* Efecto de agrandamiento al pasar el cursor */
+}
+
+/* Asegura que el contenido no esté oculto detrás de la barra superior */
+.content {
+    padding-top: 80px;
 }
