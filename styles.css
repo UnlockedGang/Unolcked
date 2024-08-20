@@ -23,12 +23,12 @@ body, html {
     text-align: center;
 }
 
-/* Cambia la fuente y el color del título */
+/* Cambia el estilo del título */
 .web-title {
-    font-family: 'Timnastic', sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;  /* Negrita */
     color: #00FF00;  /* Color verde */
     font-size: 3em;
-    font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
