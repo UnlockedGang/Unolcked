@@ -1,8 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <a>Hello World</a>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Página 1</a>
+        <a href="#">Página 2</a>
+        <a href="#">Página 3</a>
+        <a href="#">Página 4</a>
+    </div>
+
+    <div class="navbar">
+        <span class="openbtn" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div class="content">
+        <div class="overlay">
+            <h1 class="web-title">El nombre de tu web</h1>
+            <button onclick="openwin()">Sugerencias/Incidencias</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
