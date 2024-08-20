@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
+    <title>Mi Página Web</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Fuente de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barra lateral -->
-    <div class="sidebar" id="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Página 1</a>
-        <a href="#">Página 2</a>
-        <a href="#">Página 3</a>
-        <a href="#">Página 4</a>
+
+    <!-- Menú superior -->
+    <div class="topnav">
+        <a href="javascript:void(0)" onclick="openNav()">☰ Menú</a>
     </div>
 
-    <!-- Barra superior con el botón para abrir la barra lateral -->
-    <div class="navbar">
-        <span class="openbtn" onclick="openNav()">&#9776;</span>
+    <!-- Barra lateral -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="pagina1.html">Página 1</a>
+        <a href="pagina2.html">Página 2</a>
+        <a href="pagina3.html">Página 3</a>
+        <a href="pagina4.html">Página 4</a>
     </div>
 
     <!-- Contenido principal -->
-    <div class="content">
-        <div class="overlay">
-            <h1 class="web-title">El nombre de tu web</h1>
-            <button onclick="openwin()">Sugerencias/Incidencias</button>
-        </div>
+    <div class="main">
+        <h1>Bienvenido a mi página web</h1>
+        <p>Este es el contenido principal de la página.</p>
     </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
