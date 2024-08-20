@@ -3,16 +3,18 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #eef2f3; /* Suave fondo blanco-azulado para el estilo Frutiger Aero */
 }
 
 /* Estilos del contenido */
 .content {
-    background-image: url('URL_DE_TU_IMAGEN_DE_FONDO');
+    background-image: url('URL_DE_TU_IMAGEN_DE_FONDO'); /* Asegúrate de reemplazar con la URL de tu imagen */
     background-size: cover;
     background-position: center;
     height: 100%;
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté debajo de la barra */
+    z-index: 1;
+    overflow: hidden;
 }
 
 /* Overlay para el texto y el botón */
@@ -22,32 +24,35 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2; /* Asegura que el overlay esté por encima de la imagen */
+    z-index: 2;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    background: rgba(255, 255, 255, 0.4); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 15px;
 }
 
 /* Cambia la fuente y el color del título */
 .web-title {
     font-family: 'Permanent Marker', sans-serif;
-    color: #00FF00;  /* Color verde */
+    color: #00FF00;  /* Color verde brillante */
     font-size: 3em;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Efecto de sombra suave */
     margin-bottom: 20px;
 }
 
 /* Estilo del botón */
 button {
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
+    background-color: rgba(0, 255, 255, 0.8); /* Color turquesa translúcido */
+    border: 2px solid #00FF00; /* Borde verde brillante */
     color: black;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 20px; /* Botón redondeado */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 /* Barra lateral */
@@ -55,10 +60,10 @@ button {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 3; /* Asegura que la barra lateral esté por encima del contenido */
+    z-index: 3;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #222;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -85,31 +90,31 @@ button {
     margin-left: 50px;
 }
 
-/* Barra superior más grande con estilo Frutiger Aero */
+/* Barra superior */
 .navbar {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 15px;  /* Barra superior más grande */
+    padding: 20px 15px;
     text-align: left;
-    border-bottom: 3px solid #00FF00;  /* Línea inferior verde */
-    z-index: 4;  /* Asegura que la barra esté siempre por encima del contenido */
+    border-bottom: 3px solid #00FF00;
+    z-index: 4;
 }
 
-/* Estilo del ícono del menú inspirado en Frutiger Aero */
+/* Estilo del ícono del menú */
 .openbtn {
     font-size: 30px;
     cursor: pointer;
-    color: #00FF00;  /* Color verde */
+    color: #00FF00;
     border: none;
     background: none;
-    padding-left: 10px;  /* Deslizar hacia la derecha */
+    padding-left: 10px;
     transition: transform 0.2s ease-in-out;
 }
 
 .openbtn:hover {
-    transform: scale(1.1);  /* Efecto de agrandamiento al pasar el cursor */
+    transform: scale(1.1);
 }
 
 /* Asegura que el contenido no esté oculto detrás de la barra superior */
