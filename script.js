@@ -1,8 +1,10 @@
 function toggleMenu() {
     var sidebar = document.getElementById("sidebar");
-    if (sidebar.style.width === "250px") {
-        sidebar.style.width = "0";
-    } else {
+    var computedStyle = window.getComputedStyle(sidebar);
+
+    if (computedStyle.width === "0px") {
         sidebar.style.width = "250px";
+    } else {
+        sidebar.style.width = "0px";
     }
 }
