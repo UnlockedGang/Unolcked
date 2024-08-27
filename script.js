@@ -8,3 +8,6 @@ function toggleMenu() {
         sidebar.style.width = "0px";
     }
 }
+function openwin(){
+    
+}
