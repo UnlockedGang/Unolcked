@@ -8,7 +8,7 @@ function toggleMenu() {
         sidebar.style.width = "0px";
     }
 }
-function openWin(url, title, content) {
+function openWin(url, title, linkText) {
     // Crear la ventana emergente
     const myWindow = window.open("", "_blank", "width=400,height=300");
 
@@ -25,9 +25,6 @@ function openWin(url, title, content) {
                     font-family: Arial, sans-serif;
                     margin: 20px;
                 }
-                p {
-                    font-size: 16px;
-                }
                 a {
                     color: blue;
                     text-decoration: underline;
@@ -35,8 +32,7 @@ function openWin(url, title, content) {
             </style>
         </head>
         <body>
-            <p>${content}</p>
-            <a href="${url}" target="_blank">${url}</a>
+            <a href="${url}" target="_blank">${linkText}</a>
         </body>
         </html>
     `);
