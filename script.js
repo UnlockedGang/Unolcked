@@ -20,15 +20,13 @@ function toggleMenu() {
 
     // Abrir o cerrar el sidebar
     sidebar.style.width = isSidebarOpen ? "0" : "250px";
-
-    // No encriptar los enlaces internos del menú
 }
 
 // Función para abrir una ventana emergente con el enlace desencriptado
 function openWin(url, title) {
     let finalUrl = url;
 
-    // Solo desencriptar si el enlace fue encriptado y es externo
+    // Solo desencriptar si el enlace es externo y ha sido encriptado
     if (isExternalLink(url)) {
         finalUrl = decryptLink(url);
     }
@@ -63,12 +61,10 @@ function openWin(url, title) {
                     <a href="${finalUrl}" id="dynamicLink" target="_self">${title}</a>
                 </div>
                 <script>
-                    // Redirigir al URL real tras un breve retraso
+                    // Redirigir al URL real inmediatamente sin retraso
                     document.getElementById('dynamicLink').addEventListener('click', function(event) {
                         event.preventDefault();
-                        setTimeout(() => {
-                            window.location.href = this.href;
-                        }, 500);  // Agregar un retraso de 500ms
+                        window.location.href = this.href;
                     });
                 </script>
             </body>
