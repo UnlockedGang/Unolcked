@@ -26,9 +26,12 @@ function toggleMenu() {
 
 // Función para abrir una ventana emergente con el enlace desencriptado
 function openWin(url, title) {
-    // Solo encriptar y desencriptar enlaces externos
-    const encryptedUrl = isExternalLink(url) ? encryptLink(url) : url;
-    const decryptedUrl = isExternalLink(encryptedUrl) ? decryptLink(encryptedUrl) : encryptedUrl;
+    let finalUrl = url;
+
+    // Solo desencriptar si el enlace fue encriptado y es externo
+    if (isExternalLink(url)) {
+        finalUrl = decryptLink(url);
+    }
 
     const myWindow = window.open("", "_blank", "width=800,height=600");
 
@@ -57,7 +60,7 @@ function openWin(url, title) {
             </head>
             <body>
                 <div class="content">
-                    <a href="${decryptedUrl}" id="dynamicLink" target="_self">${title}</a>
+                    <a href="${finalUrl}" id="dynamicLink" target="_self">${title}</a>
                 </div>
                 <script>
                     // Redirigir al URL real tras un breve retraso
