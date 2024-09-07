@@ -18,24 +18,18 @@ function toggleMenu() {
     var sidebar = document.getElementById("sidebar");
     var isSidebarOpen = sidebar.style.width === "250px";
 
-    // Encriptar solo enlaces externos al abrir el sidebar
-    if (!isSidebarOpen) {
-        var links = sidebar.getElementsByTagName('a');
-        for (var i = 0; i < links.length; i++) {
-            if (isExternalLink(links[i].href) && links[i].dataset.encrypted !== "true") {
-                links[i].href = encryptLink(links[i].href);
-                links[i].dataset.encrypted = "true";  // Marca el enlace como encriptado
-            }
-        }
-    }
-
     // Abrir o cerrar el sidebar
     sidebar.style.width = isSidebarOpen ? "0" : "250px";
+
+    // No encriptar los enlaces internos del menú
 }
 
 // Función para abrir una ventana emergente con el enlace desencriptado
-function openWin(encryptedUrl, title) {
-    const decryptedUrl = decryptLink(encryptedUrl);  // Desencriptar el enlace antes de usarlo
+function openWin(url, title) {
+    // Solo encriptar y desencriptar enlaces externos
+    const encryptedUrl = isExternalLink(url) ? encryptLink(url) : url;
+    const decryptedUrl = isExternalLink(encryptedUrl) ? decryptLink(encryptedUrl) : encryptedUrl;
+
     const myWindow = window.open("", "_blank", "width=800,height=600");
 
     // Cargar contenido de forma retardada para evitar análisis inmediatos
