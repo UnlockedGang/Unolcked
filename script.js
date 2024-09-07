@@ -8,16 +8,21 @@ function decryptLink(encryptedUrl) {
     return atob(encryptedUrl);  // Desencriptación usando Base64
 }
 
+// Función para verificar si un enlace es externo
+function isExternalLink(url) {
+    return url.startsWith("http://") || url.startsWith("https://");
+}
+
 // Función para abrir o cerrar el menú lateral (sidebar)
 function toggleMenu() {
     var sidebar = document.getElementById("sidebar");
     var isSidebarOpen = sidebar.style.width === "250px";
 
-    // Encriptar enlaces del menú al abrir el sidebar
+    // Encriptar solo enlaces externos al abrir el sidebar
     if (!isSidebarOpen) {
         var links = sidebar.getElementsByTagName('a');
         for (var i = 0; i < links.length; i++) {
-            if (links[i].dataset.encrypted !== "true") {  // Evita encriptar múltiples veces
+            if (isExternalLink(links[i].href) && links[i].dataset.encrypted !== "true") {
                 links[i].href = encryptLink(links[i].href);
                 links[i].dataset.encrypted = "true";  // Marca el enlace como encriptado
             }
