@@ -8,7 +8,7 @@ function toggleMenu() {
         sidebar.style.width = "0px";
     }
 }
-function openWin(url, title, linkText) {
+function openWin(url, linkText) {
     // Crear la ventana emergente
     const myWindow = window.open("", "_blank", "width=800,height=600");
 
@@ -39,10 +39,9 @@ function openWin(url, title, linkText) {
                 <a href="${url}" id="dynamicLink" target="_self">${linkText}</a>
             </div>
             <script>
-                // Al hacer clic en el enlace, se cargará el contenido del enlace en la misma ventana
                 document.getElementById('dynamicLink').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevenir la acción predeterminada del enlace
-                    window.location.href = this.href; // Cambiar la ubicación de la ventana emergente
+                    event.preventDefault(); 
+                    window.location.href = this.href; 
                 });
             </script>
         </body>
